@@ -2,6 +2,8 @@
 const searchPhone = () =>{
     const searchText = document.getElementById('input-field').value
     loadPhone(searchText)
+    // clear input field
+    document.getElementById('input-field').value = '';
 }
 
 // get data from api search by name
@@ -14,13 +16,11 @@ const loadPhone = searchText =>{
 }
 //show on display search phone function
 const displayPhone = phones =>{
-    console.log(phones)
     const TwentyPhone = phones.slice(0,20);
-    console.log(TwentyPhone,'phone')
     const displayCardDiv = document.getElementById('display-card')
-    console.log(displayCardDiv)
+    // clear search display div
+    displayCardDiv.textContent = '';
     TwentyPhone.forEach(phone => {
-        // console.log(phone)
         const div = document.createElement('div');
         div.innerHTML = `
         <div class="bg-[#eeeeee] p-3">
@@ -53,6 +53,8 @@ const loadDetailsInfoPhone = phone =>{
 // dispay detail function
 const displayDetailsPhone = phone =>{
     const displayDetailsDiv = document.getElementById('display-details');
+    // clear display details div
+    displayDetailsDiv.textContent = '';
     const div = document.createElement('div');
     const phoneSensors = phone.mainFeatures.sensors;
     div.innerHTML =`
