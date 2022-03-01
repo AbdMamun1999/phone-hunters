@@ -9,11 +9,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <!-- header section and input field -->
     <header>
         <h1 class="text-center text-4xl font-bold mt-2">Mobile Market</h1>
         <div class="container w-3/4 mx-auto text-center mt-5">
-            <input class="border p-3  sm:w-5/6 lg:w-3/5 outline-none bg-gray-50 rounded" type="text" placeholder="Search phone name">
-            <button class="p-3 border bg-gray-50 rounded">Search</button>
+            <input id="input-field" class="border p-3  sm:w-5/6 lg:w-3/5 outline-none bg-gray-50 rounded" type="text" placeholder="Search phone name">
+            <button onclick="searchPhone()" class="p-3 border bg-gray-50 rounded">Search</button>
         </div>
     </header>
    
