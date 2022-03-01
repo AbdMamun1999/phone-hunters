@@ -10,10 +10,10 @@ const loadPhone = searchText =>{
     console.log(url)
     fetch(url)
         .then(response => response.json())
-        .then(data => displayData(data.data))
+        .then(data => displayPhone(data.data))
 }
-
-const displayData = phones =>{
+//show on display search phone function
+const displayPhone = phones =>{
     console.log(phones)
     const displayCardDiv = document.getElementById('display-card')
     console.log(displayCardDiv)
@@ -29,7 +29,7 @@ const displayData = phones =>{
                 <h1 class="text-xl py-3">${phone.phone_name}</h1>
                 <h3 class="mb-3">${phone.brand}</h3>
                 <div>
-                    <button class="bg-yellow-400 px-4 py-2 rounded text-white">Details</button>
+                    <button onclick="loadDetailsInfoPhone('${phone.slug}')" class="bg-yellow-400 px-4 py-2 rounded text-white">Details</button>
                 </div>
             </div>
         `;
@@ -37,3 +37,14 @@ const displayData = phones =>{
     });
 }
 
+
+// by click button detail informatin of phone
+const loadDetailsInfoPhone = phone =>{
+    const url = `https://openapi.programming-hero.com/api/phone/${phone}`
+    console.log(url)
+    fetch(url)
+    .then(response => response.json())
+    .then(data => console.log(data.data))
+}
+
+// dispay detail function
