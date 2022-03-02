@@ -49,6 +49,8 @@ const NodataFound = phones =>{
 
 //show on display search phone function
 const displayPhone = phones =>{
+    const phoneElement = [...phones]
+    console.log(phoneElement,'elements')
     const twentyPhone = phones.slice(0,20);
     const displayCardDiv = document.getElementById('display-card')
     // clear search display div
@@ -75,9 +77,7 @@ const displayPhone = phones =>{
     divClear()
     // display clear input massage
     document.getElementById('input-error').style.display = 'none'
-    // loadShowMorePhone(phones)
-    // const showMore = document.getElementById('show-more')
-    // showMore.innerHTML = `<button onclick="loadShowMorePhone('${phones}')" class="p-3 bg-amber-400 rounded-md text-white">Show more</button>`
+    
 }
 
 // display details div clear
@@ -177,6 +177,3 @@ const displayDetailsPhone = phone =>{
 }
 
 
-const loadShowMorePhone = phones =>{
-    console.log('phone',phones)
-}
