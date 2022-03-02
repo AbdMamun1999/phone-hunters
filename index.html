@@ -15,6 +15,7 @@
     <header>
         <h1 class="text-center text-4xl font-bold mt-2">Mobile Market</h1>
         <div class="container w-3/4 mx-auto text-center mt-5">
+            <p id="input-error" class="text-red-600">please write something **</p>
             <input id="input-field" class="border p-3  sm:w-5/6 lg:w-3/5 outline-none bg-gray-50 rounded" type="text" placeholder="Search phone name">
             <button onclick="searchPhone()" class="p-3 border bg-gray-50 rounded">Search</button>
         </div>
@@ -30,7 +31,12 @@
 
         <!-- display search  -->
        
-            <div id="display-card" class="container w-3/4 mx-auto grid lg:grid-cols-3 gap-x-10 gap-y-5 mt-5 p-5">
+            <div id="display-card" class="container mx-auto grid sm:grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-5 mt-5 p-5 sm:w-full">
+                <p id="error-massage" class="mx-auto">Some thing went worng, please try again</p>
+                <p id="no-datamassage" class="mx-auto">NO DATA FOUND</p>
+            </div>
+            <!-- show more button -->
+            <div id="show-more" class="text-center p-5">
                 
             </div>
     </main>
