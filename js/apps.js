@@ -49,8 +49,6 @@ const NodataFound = phones =>{
 
 //show on display search phone function
 const displayPhone = phones =>{
-    const phoneElement = [...phones]
-    console.log(phoneElement,'elements')
     const twentyPhone = phones.slice(0,20);
     const displayCardDiv = document.getElementById('display-card')
     // clear search display div
@@ -97,7 +95,6 @@ const loadDetailsInfoPhone = phone =>{
 
 // dispay detail function
 const displayDetailsPhone = phone =>{
-    console.log(phone)
     const displayDetailsDiv = document.getElementById('display-details');
     // clear display details div
     // displayDetailsDiv.textContent = '';
